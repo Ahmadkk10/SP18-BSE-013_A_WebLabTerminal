@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  h1 Login
+  form(action="/login", method="post")
+    <div id="pnl3"> 
+        .form-group
+            label(for="email") <b>Email</b>
+            input#email(type="text", class="form-control", name="email", value="faris@gmail.com")
+        .form-group
+            label(for="password") <b>Password</b>
+            input#Price(type="password", class="form-control", name="password", value="faris")
+        input(type="submit", class="btn btn-info" value="Login")   

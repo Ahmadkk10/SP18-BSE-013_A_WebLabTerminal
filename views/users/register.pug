@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  h1 Signup
+  form(action="/register", method="post")
+    <div id="pnl3">
+        .form-group
+            label(for="name") <b>Name</b>
+            input#name(type="text", class="form-control", name="name")
+        .form-group
+            label(for="email") <b>Email</b>
+            input#email(type="text", class="form-control", name="email")
+        .form-group
+            label(for="password") <b>Password</b>
+            input#Price(type="password", class="form-control", name="password")
+        input(type="submit", class="btn btn-info" value="Register")   

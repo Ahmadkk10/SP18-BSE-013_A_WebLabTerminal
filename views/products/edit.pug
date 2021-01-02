@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+    h1 Edit Product
+    form(action="/products/edit/"+product._id, method="post")
+        <div id="pnl2">
+            .form-group
+                label(for="name") <b>Name</b>
+                input#name(type="text", class="form-control", name="name", value=product.name)
+            .form-group
+                label(for="Price") <b>Price</b>
+                input#Price(type="text", class="form-control", name="Price", value=product.Price)
+            .form-group
+                label(for="pId") <b>Code</b>
+                input#productid(type="text" ,class="form-control",name="pId", value=product.pId)
+            .form-group
+                label(for="Description") <b>Details</b>
+                textarea#Description(name="Description", class="form-control",cols="30", rows="10", placeholder="Description")
+                    if product.Description != undefined || product.Description != null
+                        | #{product.Description}
+            .form-group
+                label(for="splprice") <b>Spl Price</b>
+                input#Price(type="text", class="form-control", name="splprice", value=product.splprice)
+            input(type="submit", class="btn btn-info")    
